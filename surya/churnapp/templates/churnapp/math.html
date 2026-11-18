@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>churn rate calculator</title>
+    </head>
+    <body>
+        <h1 align="center">churn rate calculator</h1><br>
+        <h2 align="center">SURYAPRAKASH PN (26010234)</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>Initial Customers Count:</label>
+            <input type="text" name="InitCust" value="{{ic}}"><br><br>
+            <label>Customers Lost Count:</label>
+            <input type="text" name="CustLost" value="{{cl}}"><br><br>
+            <input type="submit" value="Calculate"><br><br>
+            <lable>Churn Rate:</lable>
+            <input type="text" value="{{churn_rate}}">
+        </form>
+    </body>
+</html>
